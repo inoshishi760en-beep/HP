@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Meta / SEO -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>お問い合わせ | 有限会社老田硝子店</title>
+    <meta name="description" content="ガラス・サッシ・フィルム施工に関するご相談・お見積もりのご依頼はこちらから承ります。" />
+    <link rel="canonical" href="https://example.com/contact.html" />
+
+    <!-- OGP -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="お問い合わせ | 有限会社老田硝子店" />
+    <meta property="og:description" content="ご相談・お見積もりはこちらから。" />
+    <meta property="og:url" content="https://example.com/contact.html" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=1200&auto=format&fit=crop&q=60" />
+    <meta name="theme-color" content="#0ea5e9" />
+
+    <!-- Fonts / Tailwind -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { theme: { extend: { fontFamily: { sans: ['\"Noto Sans JP\"', 'system-ui', 'sans-serif'] }, colors: { brand: { 600: '#0284c7', 700: '#0369a1' } } } } };
+    </script>
+  </head>
+  <body class="font-sans text-slate-800 bg-white">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="flex h-16 items-center justify-between">
+          <a href="./index.html" class="flex items-center gap-3" aria-label="有限会社老田硝子店 ホーム">
+            <span class="inline-flex h-9 w-9 items-center justify-center rounded bg-sky-100 text-sky-700 font-bold">玻</span>
+            <span class="text-slate-900 font-semibold">有限会社老田硝子店</span>
+          </a>
+          <nav class="hidden md:flex items-center gap-6" aria-label="主要ナビゲーション">
+            <a class="hover:text-sky-700" href="./service.html">事業紹介</a>
+            <a class="hover:text-sky-700" href="./company.html">会社概要</a>
+            <a class="text-sky-700 font-medium inline-flex items-center gap-2 px-3 py-2 rounded-md border border-sky-600" href="./contact.html">お問い合わせ</a>
+          </nav>
+          <button id="menuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded text-sky-700 hover:bg-sky-50" aria-expanded="false" aria-controls="mobileNav" aria-label="メニューを開く">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"/></svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobileNav" class="md:hidden hidden border-t border-slate-200" role="dialog" aria-label="モバイルメニュー">
+        <div class="px-4 py-3 space-y-2">
+          <a class="block px-3 py-2 rounded hover:bg-sky-50" href="./service.html">事業紹介</a>
+          <a class="block px-3 py-2 rounded hover:bg-sky-50" href="./company.html">会社概要</a>
+          <a class="block px-3 py-2 rounded bg-sky-600 text-white hover:bg-sky-700" href="./contact.html">お問い合わせ</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Title -->
+    <section class="py-10 bg-slate-50 border-b border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h1 class="text-2xl sm:text-3xl font-bold text-slate-900">お問い合わせ</h1>
+        <p class="mt-2 text-slate-700">ご相談・お見積もりをご希望の方は、以下のフォームよりお気軽にご連絡ください。</p>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <main class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+      <!-- アクセシビリティを考慮したラベル・エラーメッセージ・必須表記 -->
+      <form id="contactForm" class="bg-white border border-slate-200 rounded-lg p-6 shadow-sm" novalidate>
+        <div class="grid gap-6">
+          <div>
+            <label for="name" class="block text-sm font-medium text-slate-800">お名前 <span class="text-rose-600">*</span></label>
+            <input id="name" name="name" type="text" required aria-required="true" autocomplete="name" class="mt-1 w-full rounded-md border-slate-300 focus:border-sky-600 focus:ring-sky-600" placeholder="例）山田 太郎" />
+            <p id="nameErr" class="mt-1 text-sm text-rose-600 hidden">お名前を入力してください。</p>
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-slate-800">メールアドレス <span class="text-rose-600">*</span></label>
+            <input id="email" name="email" type="email" required aria-required="true" autocomplete="email" class="mt-1 w-full rounded-md border-slate-300 focus:border-sky-600 focus:ring-sky-600" placeholder="例）example@example.com" />
+            <p id="emailErr" class="mt-1 text-sm text-rose-600 hidden">正しいメールアドレスを入力してください。</p>
+          </div>
+          <div>
+            <label for="tel" class="block text-sm font-medium text-slate-800">お電話番号</label>
+            <input id="tel" name="tel" type="tel" autocomplete="tel" class="mt-1 w-full rounded-md border-slate-300 focus:border-sky-600 focus:ring-sky-600" placeholder="例）029-000-0000" />
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium text-slate-800">お問い合わせ内容 <span class="text-rose-600">*</span></label>
+            <textarea id="message" name="message" rows="6" required aria-required="true" class="mt-1 w-full rounded-md border-slate-300 focus:border-sky-600 focus:ring-sky-600" placeholder="ご相談内容をご記入ください"></textarea>
+            <p id="messageErr" class="mt-1 text-sm text-rose-600 hidden">お問い合わせ内容を入力してください。</p>
+          </div>
+          <div class="flex items-center">
+            <input id="agree" type="checkbox" class="h-4 w-4 rounded border-slate-300 text-sky-600 focus:ring-sky-600" required aria-required="true" />
+            <label for="agree" class="ml-2 text-sm text-slate-700">個人情報の取り扱いに同意します <span class="text-rose-600">*</span></label>
+          </div>
+          <button type="submit" class="inline-flex items-center justify-center px-5 py-3 rounded-md bg-sky-600 text-white font-medium hover:bg-sky-700">送信する</button>
+          <p id="formMsg" class="text-sm text-slate-700 hidden">送信が完了しました。担当者よりご連絡いたします。ありがとうございました。</p>
+        </div>
+      </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-sm">
+          <div>
+            <div class="flex items-center gap-2"><span class="inline-flex h-8 w-8 items-center justify-center rounded bg-sky-100 text-sky-700 font-bold">玻</span><span class="font-semibold">有限会社老田硝子店</span></div>
+            <p class="mt-2 text-slate-700">〒000-0000 茨城県水戸市サンプル1-2-3</p>
+            <p class="mt-1 text-slate-700">TEL: 029-000-0000</p>
+          </div>
+          <div>
+            <p class="font-semibold text-slate-900">メニュー</p>
+            <ul class="mt-2 space-y-1">
+              <li><a class="hover:text-sky-700" href="./index.html">トップ</a></li>
+              <li><a class="hover:text-sky-700" href="./service.html">事業紹介</a></li>
+              <li><a class="hover:text-sky-700" href="./company.html">会社概要</a></li>
+              <li><a class="text-sky-700 font-medium" href="./contact.html">お問い合わせ</a></li>
+            </ul>
+          </div>
+          <div><p class="font-semibold text-slate-900">事業内容</p><p class="mt-2 text-slate-700">一般住宅のサッシ、ガラス、各種フィルム施工</p></div>
+          <div><p class="font-semibold text-slate-900">対応エリア</p><p class="mt-2 text-slate-700">水戸市および近隣地域</p></div>
+        </div>
+        <p class="mt-8 text-xs text-slate-500">© <span id="y"></span> 有限会社老田硝子店</p>
+      </div>
+    </footer>
+
+    <script>
+      const btn = document.getElementById('menuBtn');
+      const nav = document.getElementById('mobileNav');
+      btn?.addEventListener('click', () => {
+        const open = nav.classList.toggle('hidden') === false;
+        btn.setAttribute('aria-expanded', String(open));
+      });
+      document.getElementById('y').textContent = new Date().getFullYear();
+
+      // Simple client-side validation and mock submit
+      const form = document.getElementById('contactForm');
+      const nameI = document.getElementById('name');
+      const emailI = document.getElementById('email');
+      const msgI = document.getElementById('message');
+      const agreeI = document.getElementById('agree');
+      const nameErr = document.getElementById('nameErr');
+      const emailErr = document.getElementById('emailErr');
+      const messageErr = document.getElementById('messageErr');
+      const formMsg = document.getElementById('formMsg');
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        let ok = true;
+        // reset
+        [nameErr, emailErr, messageErr].forEach(el => el.classList.add('hidden'));
+        // validate
+        if (!nameI.value.trim()) { nameErr.classList.remove('hidden'); ok = false; }
+        if (!emailI.checkValidity()) { emailErr.classList.remove('hidden'); ok = false; }
+        if (!msgI.value.trim()) { messageErr.classList.remove('hidden'); ok = false; }
+        if (!agreeI.checked) { ok = false; alert('個人情報の取り扱いに同意してください。'); }
+        if (!ok) return;
+        // mock submit
+        form.reset();
+        formMsg.classList.remove('hidden');
+      });
+    </script>
+  </body>
+  </html>
+

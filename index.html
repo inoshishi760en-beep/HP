@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Meta / SEO -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>有限会社老田硝子店 | ガラスで守る、暮らしの安心。</title>
+    <meta name="description" content="有限会社老田硝子店は、一般住宅のサッシ・ガラス・各種フィルム施工を承ります。地域密着、丁寧な施工、信頼の技術で安心をお届けいたします。" />
+    <link rel="canonical" href="https://example.com/" />
+
+    <!-- OGP -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="有限会社老田硝子店" />
+    <meta property="og:description" content="一般住宅のサッシ・ガラス・各種フィルム施工。地域密着で丁寧な施工をいたします。" />
+    <meta property="og:url" content="https://example.com/" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1520975693416-35ee2e4f7cf5?w=1200&auto=format&fit=crop&q=60" />
+    <meta name="theme-color" content="#0ea5e9" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ['\"Noto Sans JP\"', 'system-ui', 'sans-serif'] },
+            colors: { brand: { 50: '#f0f9ff', 100: '#e0f2fe', 600: '#0284c7', 700: '#0369a1' } }
+          }
+        }
+      };
+    </script>
+    <style>
+      /* 追加の微調整（Tailwind補助） */
+      .backdrop { background: linear-gradient(180deg, rgba(2, 132, 199, 0.25), rgba(2, 132, 199, 0.05)); }
+    </style>
+  </head>
+  <body class="font-sans text-slate-800 bg-white">
+    <!-- ================= Header ================= -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="flex h-16 items-center justify-between">
+          <!-- Brand -->
+          <a href="./index.html" class="flex items-center gap-3" aria-label="有限会社老田硝子店 ホーム">
+            <span class="inline-flex h-9 w-9 items-center justify-center rounded bg-brand-100 text-brand-700 font-bold">玻</span>
+            <span class="text-slate-900 font-semibold">有限会社老田硝子店</span>
+          </a>
+          <!-- Nav -->
+          <nav class="hidden md:flex items-center gap-6" aria-label="主要ナビゲーション">
+            <a class="hover:text-brand-700" href="./service.html">事業紹介</a>
+            <a class="hover:text-brand-700" href="./company.html">会社概要</a>
+            <a class="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-brand-600 text-white hover:bg-brand-700" href="./contact.html" aria-label="お問い合わせページへ">
+              お問い合わせ
+            </a>
+          </nav>
+          <!-- Mobile menu button -->
+          <button id="menuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded text-brand-700 hover:bg-brand-50" aria-expanded="false" aria-controls="mobileNav" aria-label="メニューを開く">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"/></svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Nav -->
+      <div id="mobileNav" class="md:hidden hidden border-t border-slate-200" role="dialog" aria-label="モバイルメニュー">
+        <div class="px-4 py-3 space-y-2">
+          <a class="block px-3 py-2 rounded hover:bg-brand-50" href="./service.html">事業紹介</a>
+          <a class="block px-3 py-2 rounded hover:bg-brand-50" href="./company.html">会社概要</a>
+          <a class="block px-3 py-2 rounded bg-brand-600 text-white hover:bg-brand-700" href="./contact.html">お問い合わせ</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= Hero ================= -->
+    <!-- 構成: 背景イメージ + オーバーレイ + キャッチコピー -->
+    <section class="relative">
+      <img src="https://images.unsplash.com/photo-1529429612778-5100239d88c7?w=1600&auto=format&fit=crop&q=60" alt="窓ガラスと空のイメージ" class="h-[60vh] w-full object-cover" />
+      <div class="absolute inset-0 backdrop"></div>
+      <div class="absolute inset-0 flex items-center">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <div class="bg-white/80 p-6 sm:p-10 rounded-md shadow-sm max-w-2xl">
+            <h1 class="text-2xl sm:text-4xl font-bold text-slate-900 leading-snug">ガラスで守る、暮らしの安心。</h1>
+            <p class="mt-3 text-slate-700">有限会社老田硝子店は、地域に根ざした丁寧な施工で、ガラス・サッシ・各種フィルムの工事をお手伝いいたします。</p>
+            <div class="mt-5 flex flex-wrap gap-3">
+              <a href="./service.html" class="inline-flex items-center justify-center px-4 py-2 rounded-md bg-brand-600 text-white hover:bg-brand-700">事業紹介を見る</a>
+              <a href="./contact.html" class="inline-flex items-center justify-center px-4 py-2 rounded-md border border-brand-600 text-brand-700 hover:bg-brand-50">お問い合わせ</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Services Overview ================= -->
+    <!-- 事業紹介カード（ガラス／サッシ／フィルム）への導線 -->
+    <section class="py-14 bg-slate-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900">事業紹介</h2>
+        <p class="mt-2 text-slate-700">住まいに寄り添う確かな技術で、安心・快適な空間づくりをお手伝いいたします。</p>
+        <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Glass -->
+          <a href="./service.html#glass" class="group block bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden hover:shadow-md focus:outline-none focus:ring-2 focus:ring-brand-600">
+            <img src="https://images.unsplash.com/photo-1510936111840-65e151ad71bb?w=800&auto=format&fit=crop&q=60" alt="クリアガラスの施工イメージ" class="h-44 w-full object-cover" />
+            <div class="p-5">
+              <h3 class="font-semibold text-slate-900 group-hover:text-brand-700">ガラス施工</h3>
+              <p class="mt-1 text-sm text-slate-700">割れ替え・断熱・防犯など用途に応じたガラスをご提案いたします。</p>
+            </div>
+          </a>
+          <!-- Sash -->
+          <a href="./service.html#sash" class="group block bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden hover:shadow-md focus:outline-none focus:ring-2 focus:ring-brand-600">
+            <img src="https://images.unsplash.com/photo-1599148400620-33cccfb34cde?w=800&auto=format&fit=crop&q=60" alt="アルミサッシの施工イメージ" class="h-44 w-full object-cover" />
+            <div class="p-5">
+              <h3 class="font-semibold text-slate-900 group-hover:text-brand-700">サッシ施工</h3>
+              <p class="mt-1 text-sm text-slate-700">戸車や気密の改善、リフォームに合わせたサッシの交換も対応いたします。</p>
+            </div>
+          </a>
+          <!-- Film -->
+          <a href="./service.html#film" class="group block bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden hover:shadow-md focus:outline-none focus:ring-2 focus:ring-brand-600">
+            <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&auto=format&fit=crop&q=60" alt="窓フィルムの施工イメージ" class="h-44 w-full object-cover" />
+            <div class="p-5">
+              <h3 class="font-semibold text-slate-900 group-hover:text-brand-700">各種フィルム施工</h3>
+              <p class="mt-1 text-sm text-slate-700">飛散防止・UVカット・目隠しなど、目的に応じたフィルム施工を行います。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= About Summary ================= -->
+    <section class="py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-bold text-slate-900">地域密着の、丁寧なものづくり。</h2>
+          <p class="mt-3 text-slate-700">創業以来、地元の皆さまに寄り添い、確かな技術で1件1件責任をもって施工いたします。小さな修理からリフォームまで、お気軽にご相談ください。</p>
+          <div class="mt-6 flex gap-3">
+            <a href="./company.html" class="inline-flex items-center px-4 py-2 rounded-md border border-slate-300 hover:bg-slate-50">会社概要</a>
+            <a href="./contact.html" class="inline-flex items-center px-4 py-2 rounded-md bg-brand-600 text-white hover:bg-brand-700">お問い合わせ</a>
+          </div>
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1523419409543-1f7a1cbf0d9b?w=1200&auto=format&fit=crop&q=60" alt="職人の手元作業のイメージ" class="rounded-lg shadow-sm border border-slate-200 w-full object-cover" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Footer ================= -->
+    <footer class="border-t border-slate-200 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-sm">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="inline-flex h-8 w-8 items-center justify-center rounded bg-brand-100 text-brand-700 font-bold">玻</span>
+              <span class="font-semibold">有限会社老田硝子店</span>
+            </div>
+            <p class="mt-2 text-slate-700">〒000-0000 茨城県水戸市サンプル1-2-3</p>
+            <p class="mt-1 text-slate-700">TEL: 029-000-0000</p>
+          </div>
+          <div>
+            <p class="font-semibold text-slate-900">メニュー</p>
+            <ul class="mt-2 space-y-1">
+              <li><a class="hover:text-brand-700" href="./index.html">トップ</a></li>
+              <li><a class="hover:text-brand-700" href="./service.html">事業紹介</a></li>
+              <li><a class="hover:text-brand-700" href="./company.html">会社概要</a></li>
+              <li><a class="hover:text-brand-700" href="./contact.html">お問い合わせ</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="font-semibold text-slate-900">事業内容</p>
+            <p class="mt-2 text-slate-700">一般住宅のサッシ、ガラス、各種フィルム施工</p>
+          </div>
+          <div>
+            <p class="font-semibold text-slate-900">対応エリア</p>
+            <p class="mt-2 text-slate-700">水戸市および近隣地域</p>
+          </div>
+        </div>
+        <p class="mt-8 text-xs text-slate-500">© <span id="y"></span> 有限会社老田硝子店</p>
+      </div>
+      <!-- Bottom CTA for mobile -->
+      <div class="md:hidden sticky bottom-0 bg-white/95 border-t border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 py-3">
+          <a href="./contact.html" class="block w-full text-center px-4 py-3 rounded-md bg-brand-600 text-white font-medium hover:bg-brand-700">お問い合わせはこちら</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+      // Mobile nav toggle
+      const btn = document.getElementById('menuBtn');
+      const nav = document.getElementById('mobileNav');
+      btn?.addEventListener('click', () => {
+        const open = nav.classList.toggle('hidden') === false;
+        btn.setAttribute('aria-expanded', String(open));
+      });
+      // Year
+      document.getElementById('y').textContent = new Date().getFullYear();
+    </script>
+  </body>
+  </html>
+
