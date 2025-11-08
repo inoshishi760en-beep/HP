@@ -33,6 +33,12 @@
         }
       };
     </script>
+    <!-- AOS (スクロール演出) -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+
     <style>
       /* 追加の微調整（Tailwind補助） */
       .backdrop { background: linear-gradient(180deg, rgba(2, 132, 199, 0.25), rgba(2, 132, 199, 0.05)); }
@@ -76,16 +82,18 @@
     <!-- 構成: 背景イメージ + オーバーレイ + キャッチコピー -->
     <section class="relative">
       <!-- ローカル画像（ご指定のPNG）をヒーローに使用 -->
-      <img src="./ChatGPT Image 2025年11月8日 17_14_20.png" alt="窓ガラスと空のイメージ" class="h-[60vh] w-full object-cover" />
+      <!-- アニメーション: hero-img でフェードイン／ズームアウト -->
+      <img src="./ChatGPT Image 2025年11月8日 17_14_20.png" alt="窓ガラスと空のイメージ" class="hero-img h-[60vh] w-full object-cover" />
       <div class="absolute inset-0 backdrop"></div>
       <div class="absolute inset-0 flex items-center">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
-          <div class="bg-white/80 p-6 sm:p-10 rounded-md shadow-sm max-w-2xl">
+          <!-- アニメーション: hero-text でフェードアップ -->
+          <div class="hero-text bg-white/80 p-6 sm:p-10 rounded-md shadow-sm max-w-2xl">
             <h1 class="text-2xl sm:text-4xl font-bold text-slate-900 leading-snug">ガラスで守る、暮らしの安心。</h1>
             <p class="mt-3 text-slate-700">有限会社老田硝子店は、地域に根ざした丁寧な施工で、ガラス・サッシ・各種フィルムの工事をお手伝いいたします。</p>
             <div class="mt-5 flex flex-wrap gap-3">
-              <a href="./service.html" class="inline-flex items-center justify-center px-4 py-2 rounded-md bg-brand-600 text-white hover:bg-brand-700">事業紹介を見る</a>
-              <a href="./contact.html" class="inline-flex items-center justify-center px-4 py-2 rounded-md border border-brand-600 text-brand-700 hover:bg-brand-50">お問い合わせ</a>
+              <a href="./service.html" class="hover-float inline-flex items-center justify-center px-4 py-2 rounded-md bg-brand-600 text-white hover:bg-brand-700">事業紹介を見る</a>
+              <a href="./contact.html" class="hover-float inline-flex items-center justify-center px-4 py-2 rounded-md border border-brand-600 text-brand-700 hover:bg-brand-50">お問い合わせ</a>
             </div>
           </div>
         </div>
@@ -94,13 +102,13 @@
 
     <!-- ================= Services Overview ================= -->
     <!-- 事業紹介カード（ガラス／サッシ／フィルム）への導線 -->
-    <section class="py-14 bg-slate-50">
+    <section class="py-14 bg-slate-50" data-aos="fade-up">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <h2 class="text-xl sm:text-2xl font-bold text-slate-900">事業紹介</h2>
         <p class="mt-2 text-slate-700">住まいに寄り添う確かな技術で、安心・快適な空間づくりをお手伝いいたします。</p>
         <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <!-- Glass -->
-          <a href="./service.html#glass" class="group block bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden hover:shadow-md focus:outline-none focus:ring-2 focus:ring-brand-600">
+          <a href="./service.html#glass" class="hover-float group block bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden hover:shadow-md focus:outline-none focus:ring-2 focus:ring-brand-600" data-aos="fade-up" data-aos-delay="0">
             <img src="https://images.unsplash.com/photo-1510936111840-65e151ad71bb?w=800&auto=format&fit=crop&q=60" alt="クリアガラスの施工イメージ" class="h-44 w-full object-cover" />
             <div class="p-5">
               <h3 class="font-semibold text-slate-900 group-hover:text-brand-700">ガラス施工</h3>
@@ -108,7 +116,7 @@
             </div>
           </a>
           <!-- Sash -->
-          <a href="./service.html#sash" class="group block bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden hover:shadow-md focus:outline-none focus:ring-2 focus:ring-brand-600">
+          <a href="./service.html#sash" class="hover-float group block bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden hover:shadow-md focus:outline-none focus:ring-2 focus:ring-brand-600" data-aos="fade-up" data-aos-delay="100">
             <img src="https://images.unsplash.com/photo-1599148400620-33cccfb34cde?w=800&auto=format&fit=crop&q=60" alt="アルミサッシの施工イメージ" class="h-44 w-full object-cover" />
             <div class="p-5">
               <h3 class="font-semibold text-slate-900 group-hover:text-brand-700">サッシ施工</h3>
@@ -116,7 +124,7 @@
             </div>
           </a>
           <!-- Film -->
-          <a href="./service.html#film" class="group block bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden hover:shadow-md focus:outline-none focus:ring-2 focus:ring-brand-600">
+          <a href="./service.html#film" class="hover-float group block bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden hover:shadow-md focus:outline-none focus:ring-2 focus:ring-brand-600" data-aos="fade-up" data-aos-delay="200">
             <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&auto=format&fit=crop&q=60" alt="窓フィルムの施工イメージ" class="h-44 w-full object-cover" />
             <div class="p-5">
               <h3 class="font-semibold text-slate-900 group-hover:text-brand-700">各種フィルム施工</h3>
@@ -128,7 +136,7 @@
     </section>
 
     <!-- ================= About Summary ================= -->
-    <section class="py-16">
+    <section class="py-16" data-aos="fade-up">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10 items-center">
         <div>
           <h2 class="text-xl sm:text-2xl font-bold text-slate-900">地域密着の、丁寧なものづくり。</h2>
@@ -177,24 +185,15 @@
         <p class="mt-8 text-xs text-slate-500">© <span id="y"></span> 有限会社老田硝子店</p>
       </div>
       <!-- Bottom CTA for mobile -->
-      <div class="md:hidden sticky bottom-0 bg-white/95 border-t border-slate-200">
+      <div id="mobileStickyCta" class="md:hidden sticky bottom-0 bg-white/95 border-t border-slate-200 fade-in">
         <div class="max-w-6xl mx-auto px-4 py-3">
-          <a href="./contact.html" class="block w-full text-center px-4 py-3 rounded-md bg-brand-600 text-white font-medium hover:bg-brand-700">お問い合わせはこちら</a>
+          <a href="./contact.html" class="hover-float block w-full text-center px-4 py-3 rounded-md bg-brand-600 text-white font-medium hover:bg-brand-700">お問い合わせはこちら</a>
         </div>
       </div>
     </footer>
 
     <!-- Scripts -->
-    <script>
-      // Mobile nav toggle
-      const btn = document.getElementById('menuBtn');
-      const nav = document.getElementById('mobileNav');
-      btn?.addEventListener('click', () => {
-        const open = nav.classList.toggle('hidden') === false;
-        btn.setAttribute('aria-expanded', String(open));
-      });
-      // Year
-      document.getElementById('y').textContent = new Date().getFullYear();
-    </script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+    <script src="./js/script.js" defer></script>
   </body>
   </html>

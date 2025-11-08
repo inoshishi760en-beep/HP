@@ -1,0 +1,55 @@
+/*
+  老田硝子店 - 最小構成用スタイル
+  目的:
+    - Tailwindの補助として、軽量なアニメーションと共通効果を提供
+    - 可読性のためHTMLコメントに連動した命名
+*/
+
+:root {
+  --brand-600: #0284c7; /* sky-600 */
+  --brand-700: #0369a1; /* sky-700 */
+}
+
+/* ヒーロー背景のフェードイン（画像は軽くズームアウト） */
+.hero-img {
+  opacity: 0;
+  transform: scale(1.02);
+  transition: opacity 900ms ease, transform 1200ms ease;
+}
+.hero-img.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ヒーローテキストのフェードアップ */
+.hero-text {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 700ms ease 150ms, transform 700ms ease 150ms;
+}
+.hero-text.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* カード/ボタンの軽い浮き上がり（ホバー） */
+.hover-float { transition: transform 200ms ease, box-shadow 200ms ease; }
+.hover-float:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 8px 24px rgba(2,132,199,0.12); }
+
+/* 入力フォーカス時にわずかなシャドウを付与 */
+.focus-elevate:focus {
+  outline: none;
+  box-shadow:
+    0 0 0 3px rgba(2,132,199,0.25),
+    0 4px 12px rgba(0,0,0,0.06);
+}
+
+/* セクション背景の淡いグラデーション（会社概要などに使用） */
+.bg-gradient-soft {
+  background: linear-gradient(180deg, rgba(14,165,233,0.08), rgba(14,165,233,0));
+}
+
+/* モバイル下部CTAの自然な表示 */
+.fade-in { opacity: 0; transition: opacity 700ms ease; }
+.fade-in.is-visible { opacity: 1; }
+

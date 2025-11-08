@@ -24,6 +24,9 @@
     <script>
       tailwind.config = { theme: { extend: { fontFamily: { sans: ['\"Noto Sans JP\"', 'system-ui', 'sans-serif'] }, colors: { brand: { 600: '#0284c7', 700: '#0369a1' } } } } };
     </script>
+    <!-- AOS / Custom CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body class="font-sans text-slate-800 bg-white">
     <!-- Header -->
@@ -62,34 +65,34 @@
     </section>
 
     <!-- Contact Form -->
-    <main class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+    <main class="max-w-3xl mx-auto px-4 sm:px-6 py-12" data-aos="fade-up">
       <!-- アクセシビリティを考慮したラベル・エラーメッセージ・必須表記 -->
       <form id="contactForm" class="bg-white border border-slate-200 rounded-lg p-6 shadow-sm" novalidate>
         <div class="grid gap-6">
           <div>
             <label for="name" class="block text-sm font-medium text-slate-800">お名前 <span class="text-rose-600">*</span></label>
-            <input id="name" name="name" type="text" required aria-required="true" autocomplete="name" class="mt-1 w-full rounded-md border-slate-300 focus:border-sky-600 focus:ring-sky-600" placeholder="例）山田 太郎" />
+            <input id="name" name="name" type="text" required aria-required="true" autocomplete="name" class="focus-elevate mt-1 w-full rounded-md border-slate-300 focus:border-sky-600 focus:ring-sky-600" placeholder="例）山田 太郎" />
             <p id="nameErr" class="mt-1 text-sm text-rose-600 hidden">お名前を入力してください。</p>
           </div>
           <div>
             <label for="email" class="block text-sm font-medium text-slate-800">メールアドレス <span class="text-rose-600">*</span></label>
-            <input id="email" name="email" type="email" required aria-required="true" autocomplete="email" class="mt-1 w-full rounded-md border-slate-300 focus:border-sky-600 focus:ring-sky-600" placeholder="例）example@example.com" />
+            <input id="email" name="email" type="email" required aria-required="true" autocomplete="email" class="focus-elevate mt-1 w-full rounded-md border-slate-300 focus:border-sky-600 focus:ring-sky-600" placeholder="例）example@example.com" />
             <p id="emailErr" class="mt-1 text-sm text-rose-600 hidden">正しいメールアドレスを入力してください。</p>
           </div>
           <div>
             <label for="tel" class="block text-sm font-medium text-slate-800">お電話番号</label>
-            <input id="tel" name="tel" type="tel" autocomplete="tel" class="mt-1 w-full rounded-md border-slate-300 focus:border-sky-600 focus:ring-sky-600" placeholder="例）029-000-0000" />
+            <input id="tel" name="tel" type="tel" autocomplete="tel" class="focus-elevate mt-1 w-full rounded-md border-slate-300 focus:border-sky-600 focus:ring-sky-600" placeholder="例）029-000-0000" />
           </div>
           <div>
             <label for="message" class="block text-sm font-medium text-slate-800">お問い合わせ内容 <span class="text-rose-600">*</span></label>
-            <textarea id="message" name="message" rows="6" required aria-required="true" class="mt-1 w-full rounded-md border-slate-300 focus:border-sky-600 focus:ring-sky-600" placeholder="ご相談内容をご記入ください"></textarea>
+            <textarea id="message" name="message" rows="6" required aria-required="true" class="focus-elevate mt-1 w-full rounded-md border-slate-300 focus:border-sky-600 focus:ring-sky-600" placeholder="ご相談内容をご記入ください"></textarea>
             <p id="messageErr" class="mt-1 text-sm text-rose-600 hidden">お問い合わせ内容を入力してください。</p>
           </div>
           <div class="flex items-center">
             <input id="agree" type="checkbox" class="h-4 w-4 rounded border-slate-300 text-sky-600 focus:ring-sky-600" required aria-required="true" />
             <label for="agree" class="ml-2 text-sm text-slate-700">個人情報の取り扱いに同意します <span class="text-rose-600">*</span></label>
           </div>
-          <button type="submit" class="inline-flex items-center justify-center px-5 py-3 rounded-md bg-sky-600 text-white font-medium hover:bg-sky-700">送信する</button>
+          <button type="submit" class="hover-float inline-flex items-center justify-center px-5 py-3 rounded-md bg-sky-600 text-white font-medium transition-transform hover:scale-[1.02] hover:bg-sky-700">送信する</button>
           <p id="formMsg" class="text-sm text-slate-700 hidden">送信が完了しました。担当者よりご連絡いたします。ありがとうございました。</p>
         </div>
       </form>
@@ -120,42 +123,7 @@
       </div>
     </footer>
 
-    <script>
-      const btn = document.getElementById('menuBtn');
-      const nav = document.getElementById('mobileNav');
-      btn?.addEventListener('click', () => {
-        const open = nav.classList.toggle('hidden') === false;
-        btn.setAttribute('aria-expanded', String(open));
-      });
-      document.getElementById('y').textContent = new Date().getFullYear();
-
-      // Simple client-side validation and mock submit
-      const form = document.getElementById('contactForm');
-      const nameI = document.getElementById('name');
-      const emailI = document.getElementById('email');
-      const msgI = document.getElementById('message');
-      const agreeI = document.getElementById('agree');
-      const nameErr = document.getElementById('nameErr');
-      const emailErr = document.getElementById('emailErr');
-      const messageErr = document.getElementById('messageErr');
-      const formMsg = document.getElementById('formMsg');
-
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        let ok = true;
-        // reset
-        [nameErr, emailErr, messageErr].forEach(el => el.classList.add('hidden'));
-        // validate
-        if (!nameI.value.trim()) { nameErr.classList.remove('hidden'); ok = false; }
-        if (!emailI.checkValidity()) { emailErr.classList.remove('hidden'); ok = false; }
-        if (!msgI.value.trim()) { messageErr.classList.remove('hidden'); ok = false; }
-        if (!agreeI.checked) { ok = false; alert('個人情報の取り扱いに同意してください。'); }
-        if (!ok) return;
-        // mock submit
-        form.reset();
-        formMsg.classList.remove('hidden');
-      });
-    </script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+    <script src="./js/script.js" defer></script>
   </body>
   </html>
-
