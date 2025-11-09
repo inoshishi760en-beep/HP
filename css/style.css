@@ -1,16 +1,14 @@
-/*
-  老田硝子店 - 最小構成用スタイル
-  目的:
-    - Tailwindの補助として、軽量なアニメーションと共通効果を提供
-    - 可読性のためHTMLコメントに連動した命名
-*/
+﻿/*
+  閠∫伐遑晏ｭ仙ｺ・- 譛蟆乗ｧ区・逕ｨ繧ｹ繧ｿ繧､繝ｫ
+  逶ｮ逧・
+    - Tailwind縺ｮ陬懷勧縺ｨ縺励※縲∬ｻｽ驥上↑繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ縺ｨ蜈ｱ騾壼柑譫懊ｒ謠蝉ｾ・    - 蜿ｯ隱ｭ諤ｧ縺ｮ縺溘ａHTML繧ｳ繝｡繝ｳ繝医↓騾｣蜍輔＠縺溷多蜷・*/
 
 :root {
   --brand-600: #0284c7; /* sky-600 */
   --brand-700: #0369a1; /* sky-700 */
 }
 
-/* ヒーロー背景のフェードイン（画像は軽くズームアウト） */
+/* 繝偵・繝ｭ繝ｼ閭梧勹縺ｮ繝輔ぉ繝ｼ繝峨う繝ｳ・育判蜒上・霆ｽ縺上ぜ繝ｼ繝繧｢繧ｦ繝茨ｼ・*/
 .hero-img {
   opacity: 0;
   transform: scale(1.02);
@@ -21,7 +19,7 @@
   transform: scale(1);
 }
 
-/* ヒーローテキストのフェードアップ */
+/* 繝偵・繝ｭ繝ｼ繝・く繧ｹ繝医・繝輔ぉ繝ｼ繝峨い繝・・ */
 .hero-text {
   opacity: 0;
   transform: translateY(12px);
@@ -32,11 +30,11 @@
   transform: translateY(0);
 }
 
-/* カード/ボタンの軽い浮き上がり（ホバー） */
+/* 繧ｫ繝ｼ繝・繝懊ち繝ｳ縺ｮ霆ｽ縺・ｵｮ縺堺ｸ翫′繧奇ｼ医・繝舌・・・*/
 .hover-float { transition: transform 200ms ease, box-shadow 200ms ease; }
 .hover-float:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 8px 24px rgba(2,132,199,0.12); }
 
-/* 入力フォーカス時にわずかなシャドウを付与 */
+/* 蜈･蜉帙ヵ繧ｩ繝ｼ繧ｫ繧ｹ譎ゅ↓繧上★縺九↑繧ｷ繝｣繝峨え繧剃ｻ倅ｸ・*/
 .focus-elevate:focus {
   outline: none;
   box-shadow:
@@ -44,12 +42,77 @@
     0 4px 12px rgba(0,0,0,0.06);
 }
 
-/* セクション背景の淡いグラデーション（会社概要などに使用） */
+/* 繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ閭梧勹縺ｮ豺｡縺・げ繝ｩ繝・・繧ｷ繝ｧ繝ｳ・井ｼ夂､ｾ讎りｦ√↑縺ｩ縺ｫ菴ｿ逕ｨ・・*/
 .bg-gradient-soft {
   background: linear-gradient(180deg, rgba(14,165,233,0.08), rgba(14,165,233,0));
 }
 
-/* モバイル下部CTAの自然な表示 */
+/* 繝｢繝舌う繝ｫ荳矩ΚCTA縺ｮ閾ｪ辟ｶ縺ｪ陦ｨ遉ｺ */
 .fade-in { opacity: 0; transition: opacity 700ms ease; }
 .fade-in.is-visible { opacity: 1; }
+
+/* =========================
+   Hero Typography Tuning
+   - Improve readability and focus without touching HTML
+   ========================= */
+
+/* Enhance hero card visibility and spacing */
+.hero-text {
+  background: rgba(255, 255, 255, 0.85);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  padding: 1.5rem !important; /* ~p-6 but a touch tighter on mobile */
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 30px rgba(2, 132, 199, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  max-width: 40rem;
+}
+@media (min-width: 640px) { /* sm */
+  .hero-text { padding: 2rem !important; max-width: 48rem; }
+}
+@media (min-width: 768px) { /* md */
+  .hero-text { padding: 2.5rem !important; }
+}
+
+/* Headline scale and rhythm */
+.hero-text h1 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  font-size: clamp(1.875rem, 2.4vw + 1rem, 3.25rem); /* 30窶・2px */
+}
+@media (min-width: 768px) {
+  .hero-text h1 { font-size: 3rem; }
+}
+@media (min-width: 1024px) {
+  .hero-text h1 { font-size: 3.25rem; }
+}
+
+/* Lead sentence: slightly larger with generous line-height */
+.hero-text p {
+  margin-top: 1rem !important;
+  font-size: 1rem;            /* 16px */
+  line-height: 1.75;          /* comfortable reading */
+  max-width: 42rem;
+  color: #334155;             /* close to slate-700 */
+}
+@media (min-width: 768px) {
+  .hero-text p { font-size: 1.125rem; } /* 18px */
+}
+
+/* CTAs: make hit area and type a touch larger */
+.hero-text a {
+  padding: 0.75rem 1.25rem !important; /* ~px-5 py-3 */
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+@media (min-width: 768px) {
+  .hero-text a { font-size: 1rem; }
+}
+
+/* Hero image height fine-tuning */
+.hero-img { height: 60vh !important; }
+@media (min-width: 768px) {
+  .hero-img { height: 68vh !important; }
+}
 
