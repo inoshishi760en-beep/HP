@@ -1,0 +1,22 @@
+﻿*** Begin Patch
+*** Update File: index.html
+@@
+-      <img src="./ChatGPT Image 2025年11?E日 17_14_20.png" alt="窓ガラスと空のイメージ" class="hero-img h-[60vh] w-full object-cover" />
++      <img src="./ChatGPT Image 2025年11?E日 17_14_20.png" alt="窓ガラスと空のイメージ" class="hero-img h-[60vh] md:h-[68vh] w-full object-cover" />
+@@
+-          <div class="hero-text bg-white/80 p-6 sm:p-10 rounded-md shadow-sm max-w-2xl">
+-            <h1 class="text-2xl sm:text-4xl font-bold text-slate-900 leading-snug">ガラスで守る、暮らしの安?E??E/h1>
+-            <p class="mt-3 text-slate-700">有限会社老田硝子店?E、地域に根ざした丁寧な施工で、ガラス・サチE??・吁E??フィルムの工事をお手伝いぁE??します、E/p>
+-            <div class="mt-5 flex flex-wrap gap-3">
+-              <a href="./service.html" class="hover-float inline-flex items-center justify-center px-4 py-2 rounded-md bg-brand-600 text-white hover:bg-brand-700">事業紹介を見る</a>
+-              <a href="./contact.html" class="hover-float inline-flex items-center justify-center px-4 py-2 rounded-md border border-brand-600 text-brand-700 hover:bg-brand-50">お問ぁE??わせ</a>
++          <div class="hero-text bg-white/85 backdrop-blur-sm p-6 sm:p-8 md:p-10 rounded-md shadow-sm ring-1 ring-white/60 max-w-2xl md:max-w-3xl">
++            <h1 class="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 leading-tight">ガラスで守る、暮らしの安?E??E/h1>
++            <p class="mt-4 text-slate-700 text-base md:text-lg leading-relaxed">有限会社老田硝子店?E、地域に根ざした丁寧な施工で、ガラス・サチE??・吁E??フィルムの工事をお手伝いぁE??します、E/p>
++            <div class="mt-6 flex flex-wrap gap-3">
++              <a href="./service.html" class="hover-float inline-flex items-center justify-center px-5 py-3 rounded-md bg-brand-600 text-white hover:bg-brand-700 font-medium text-sm md:text-base">事業紹介を見る</a>
++              <a href="./contact.html" class="hover-float inline-flex items-center justify-center px-5 py-3 rounded-md border border-brand-600 text-brand-700 hover:bg-brand-50 font-medium text-sm md:text-base">お問ぁE??わせ</a>
+             </div>
+           </div>
+*** End Patch
+
