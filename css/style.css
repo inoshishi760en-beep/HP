@@ -1,25 +1,33 @@
-﻿/*
-  閠∫伐遑晏ｭ仙ｺ・- 譛蟆乗ｧ区・逕ｨ繧ｹ繧ｿ繧､繝ｫ
-  逶ｮ逧・
-    - Tailwind縺ｮ陬懷勧縺ｨ縺励※縲∬ｻｽ驥上↑繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ縺ｨ蜈ｱ騾壼柑譫懊ｒ謠蝉ｾ・    - 蜿ｯ隱ｭ諤ｧ縺ｮ縺溘ａHTML繧ｳ繝｡繝ｳ繝医↓騾｣蜍輔＠縺溷多蜷・*/
+/*
+  老田硝子店 - 最小構成用スタイル
+  目的
+    - Tailwindの補助として、軽量なアニメーションと共通効果を提供
+    - HTMLコメントに連動したシンプルな命名
+*/
 
 :root {
   --brand-600: #0284c7; /* sky-600 */
   --brand-700: #0369a1; /* sky-700 */
 }
 
-/* 繝偵・繝ｭ繝ｼ閭梧勹縺ｮ繝輔ぉ繝ｼ繝峨う繝ｳ・育判蜒上・霆ｽ縺上ぜ繝ｼ繝繧｢繧ｦ繝茨ｼ・*/
+/* ヒーロー背景のフェードインと画像の軽いズームアウト */
 .hero-img {
   opacity: 0;
-  transform: scale(1.02);
+  transform: scale(1.01);
   transition: opacity 900ms ease, transform 1200ms ease;
+  width: 100%;
+  height: clamp(420px, 72vh, 920px);
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: left center; /* テキストを含む左側を優先表示 */
+  display: block;
 }
 .hero-img.is-visible {
   opacity: 1;
   transform: scale(1);
 }
 
-/* 繝偵・繝ｭ繝ｼ繝・く繧ｹ繝医・繝輔ぉ繝ｼ繝峨い繝・・ */
+/* ヒーローテキストのフェードアップ */
 .hero-text {
   opacity: 0;
   transform: translateY(12px);
@@ -30,11 +38,11 @@
   transform: translateY(0);
 }
 
-/* 繧ｫ繝ｼ繝・繝懊ち繝ｳ縺ｮ霆ｽ縺・ｵｮ縺堺ｸ翫′繧奇ｼ医・繝舌・・・*/
+/* カードやボタンの軽い持ち上がり（ホバー時） */
 .hover-float { transition: transform 200ms ease, box-shadow 200ms ease; }
 .hover-float:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 8px 24px rgba(2,132,199,0.12); }
 
-/* 蜈･蜉帙ヵ繧ｩ繝ｼ繧ｫ繧ｹ譎ゅ↓繧上★縺九↑繧ｷ繝｣繝峨え繧剃ｻ倅ｸ・*/
+/* 入力フォーカス時のわずかなシャドウ */
 .focus-elevate:focus {
   outline: none;
   box-shadow:
@@ -42,12 +50,12 @@
     0 4px 12px rgba(0,0,0,0.06);
 }
 
-/* 繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ閭梧勹縺ｮ豺｡縺・げ繝ｩ繝・・繧ｷ繝ｧ繝ｳ・井ｼ夂､ｾ讎りｦ√↑縺ｩ縺ｫ菴ｿ逕ｨ・・*/
+/* セクション背景の淡いグラデーション（会社概要などに使用） */
 .bg-gradient-soft {
   background: linear-gradient(180deg, rgba(14,165,233,0.08), rgba(14,165,233,0));
 }
 
-/* 繝｢繝舌う繝ｫ荳矩ΚCTA縺ｮ閾ｪ辟ｶ縺ｪ陦ｨ遉ｺ */
+/* モバイル下部CTAの自然な表示 */
 .fade-in { opacity: 0; transition: opacity 700ms ease; }
 .fade-in.is-visible { opacity: 1; }
 
@@ -79,13 +87,13 @@
   font-weight: 700;
   letter-spacing: -0.01em;
   line-height: 1.2;
-  font-size: clamp(1.875rem, 2.4vw + 1rem, 3.25rem); /* 30窶・2px */
+  font-size: clamp(1.75rem, 2.1vw + 1rem, 2.9rem); /* 28–46px */
 }
 @media (min-width: 768px) {
-  .hero-text h1 { font-size: 3rem; }
+  .hero-text h1 { font-size: 2.75rem; }
 }
 @media (min-width: 1024px) {
-  .hero-text h1 { font-size: 3.25rem; }
+  .hero-text h1 { font-size: 2.9rem; }
 }
 
 /* Lead sentence: slightly larger with generous line-height */
@@ -111,8 +119,6 @@
 }
 
 /* Hero image height fine-tuning */
-.hero-img { height: 60vh !important; }
 @media (min-width: 768px) {
-  .hero-img { height: 68vh !important; }
+  .hero-img { height: clamp(520px, 78vh, 1040px); }
 }
-

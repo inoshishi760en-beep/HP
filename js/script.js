@@ -1,12 +1,13 @@
-﻿// 閠∫伐遑晏ｭ仙ｺ・- 譛蟆乗ｧ区・逕ｨ繧ｹ繧ｯ繝ｪ繝励ヨ
-// 蠖ｹ蜑ｲ:
-//  - 繝｢繝舌う繝ｫ繝｡繝九Η繝ｼ髢矩哩
-//  - 蟷ｴ蜿ｷ縺ｮ閾ｪ蜍墓峩譁ｰ
-//  - 繝偵・繝ｭ繝ｼ逕ｻ蜒・繝・く繧ｹ繝医・蛻晄悄繝輔ぉ繝ｼ繝峨う繝ｳ
-//  - AOS(Animate On Scroll) 縺ｮ蛻晄悄蛹・//  - 縺雁撫縺・粋繧上○繝輔か繝ｼ繝縺ｮ邁｡譏薙ヰ繝ｪ繝・・繧ｷ繝ｧ繝ｳ・区闘莨ｼ騾∽ｿ｡
+// 老田硝子店 - 最小構成用スクリプト
+// 役割:
+//  - モバイルメニュー開閉
+//  - 年号の自動更新
+//  - ヒーロー画像・テキストの初期フェードイン
+//  - AOS(Animate On Scroll) の初期化
+//  - お問い合わせフォームの簡易バリデーションと擬似送信
 
 document.addEventListener('DOMContentLoaded', function () {
-  // 繝｢繝舌う繝ｫ繝｡繝九Η繝ｼ髢矩哩
+  // モバイルメニュー開閉
   const btn = document.getElementById('menuBtn');
   const nav = document.getElementById('mobileNav');
   if (btn && nav) {
@@ -16,28 +17,29 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // 蟷ｴ蜿ｷ縺ｮ閾ｪ蜍墓峩譁ｰ
+  // 年号の自動更新
   const year = document.getElementById('y');
   if (year) year.textContent = new Date().getFullYear();
 
-  // 繝偵・繝ｭ繝ｼ縺ｮ繝輔ぉ繝ｼ繝峨う繝ｳ・育判蜒・-> 繝・く繧ｹ繝茨ｼ・  const heroImg = document.querySelector('.hero-img');
+  // ヒーローのフェードイン（画像 -> テキスト）
+  const heroImg = document.querySelector('.hero-img');
   const heroText = document.querySelector('.hero-text');
   if (heroImg) {
-    // 逕ｻ蜒上′隱ｭ縺ｿ霎ｼ縺ｾ繧後◆繧芽｡ｨ遉ｺ・医く繝｣繝・す繝･閠・・・・    const reveal = () => heroImg.classList.add('is-visible');
-    if ((heroImg).complete) reveal(); else heroImg.addEventListener('load', reveal);
+    const reveal = () => heroImg.classList.add('is-visible');
+    if (heroImg.complete) reveal(); else heroImg.addEventListener('load', reveal);
   }
   if (heroText) {
-    // 蟆代＠驕・ｉ縺帙※繝・く繧ｹ繝医ｒ陦ｨ遉ｺ
     setTimeout(() => heroText.classList.add('is-visible'), 150);
   }
 
-  // 繝｢繝舌う繝ｫ荳矩ΚCTA縺ｮ縺ｵ繧薙ｏ繧願｡ｨ遉ｺ
+  // モバイル下部CTAのふんわり表示
   const mobileCta = document.getElementById('mobileStickyCta');
   if (mobileCta) {
     setTimeout(() => mobileCta.classList.add('is-visible'), 300);
   }
 
-  // AOS 蛻晄悄蛹厄ｼ医せ繧ｯ繝ｭ繝ｼ繝ｫ縺ｧ縺ｵ繧薙ｏ繧雁・迴ｾ・・  if (window.AOS) {
+  // AOS 初期化（スクロール演出）
+  if (window.AOS) {
     AOS.init({
       duration: 650,
       easing: 'ease-out',
@@ -46,7 +48,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // 縺雁撫縺・粋繧上○繝輔か繝ｼ繝・域闘莨ｼ騾∽ｿ｡ + 邁｡譏捺､懆ｨｼ・・  const form = document.getElementById('contactForm');
+  // お問い合わせフォームの擬似送信 + 簡易検証
+  const form = document.getElementById('contactForm');
   if (form) {
     const nameI = document.getElementById('name');
     const emailI = document.getElementById('email');
@@ -61,15 +64,16 @@ document.addEventListener('DOMContentLoaded', function () {
       e.preventDefault();
       let ok = true;
       [nameErr, emailErr, messageErr].forEach(el => el && el.classList.add('hidden'));
+
       if (nameI && !nameI.value.trim()) { nameErr && nameErr.classList.remove('hidden'); ok = false; }
       if (emailI && !emailI.checkValidity()) { emailErr && emailErr.classList.remove('hidden'); ok = false; }
       if (msgI && !msgI.value.trim()) { messageErr && messageErr.classList.remove('hidden'); ok = false; }
-      if (agreeI && !agreeI.checked) { ok = false; alert('蛟倶ｺｺ諠・ｱ縺ｮ蜿悶ｊ謇ｱ縺・↓蜷梧э縺励※縺上□縺輔＞縲・); }
+      if (agreeI && !agreeI.checked) { ok = false; alert('個人情報の取り扱いに同意してください。'); }
       if (!ok) return;
+
       form.reset();
       formMsg && formMsg.classList.remove('hidden');
     });
   }
 });
-
 
