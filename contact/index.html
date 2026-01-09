@@ -65,50 +65,49 @@
     </div>
   </section>
 
-  <main class="max-w-3xl mx-auto px-4 sm:px-6 py-12" data-aos="fade-up">
-    <form id="contactForm" class="bg-white border border-slate-200 rounded-lg p-6 shadow-sm" novalidate>
-      <div class="grid gap-6">
-        <div>
-          <label for="name" class="block text-sm font-medium text-slate-800">お名前 <span
-              class="text-rose-600">*</span></label>
-          <input id="name" name="name" type="text" required aria-required="true" autocomplete="name"
-            class="focus-elevate mt-1 w-full rounded-md border-slate-300 focus:border-sky-600 focus:ring-sky-600"
-            placeholder="例）山田 太郎" />
-          <p id="nameErr" class="mt-1 text-sm text-rose-600 hidden">お名前を入力してください。</p>
-        </div>
-        <div>
-          <label for="email" class="block text-sm font-medium text-slate-800">メールアドレス <span
-              class="text-rose-600">*</span></label>
-          <input id="email" name="email" type="email" required aria-required="true" autocomplete="email"
-            class="focus-elevate mt-1 w-full rounded-md border-slate-300 focus:border-sky-600 focus:ring-sky-600"
-            placeholder="例）example@example.com" />
-          <p id="emailErr" class="mt-1 text-sm text-rose-600 hidden">正しいメールアドレスを入力してください。</p>
-        </div>
-        <div>
-          <label for="tel" class="block text-sm font-medium text-slate-800">お電話番号</label>
-          <input id="tel" name="tel" type="tel" autocomplete="tel"
-            class="focus-elevate mt-1 w-full rounded-md border-slate-300 focus:border-sky-600 focus:ring-sky-600"
-            placeholder="例）029-000-0000" />
-        </div>
-        <div>
-          <label for="message" class="block text-sm font-medium text-slate-800">お問い合わせ内容 <span
-              class="text-rose-600">*</span></label>
-          <textarea id="message" name="message" rows="6" required aria-required="true"
-            class="focus-elevate mt-1 w-full rounded-md border-slate-300 focus:border-sky-600 focus:ring-sky-600"
-            placeholder="ご相談内容をご記入ください"></textarea>
-          <p id="messageErr" class="mt-1 text-sm text-rose-600 hidden">お問い合わせ内容を入力してください。</p>
-        </div>
-        <div class="flex items-center">
-          <input id="agree" type="checkbox" class="h-4 w-4 rounded border-slate-300 text-sky-600 focus:ring-sky-600"
-            required aria-required="true" />
-          <label for="agree" class="ml-2 text-sm text-slate-700">個人情報の取り扱いに同意します <span
-              class="text-rose-600">*</span></label>
-        </div>
-        <button type="submit"
-          class="hover-float inline-flex items-center justify-center px-5 py-3 rounded-md bg-sky-600 text-white font-medium hover:bg-sky-700">送信する</button>
-        <p id="formMsg" class="text-sm text-slate-700 hidden">送信が完了しました。担当よりご連絡いたします。ありがとうございました。</p>
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 py-12" data-aos="fade-up">
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- Phone Contact Section -->
+      <div
+        class="bg-sky-50 border border-sky-100 rounded-xl p-6 sm:p-8 text-center shadow-sm flex flex-col justify-center items-center h-full">
+        <h2 class="text-xl font-bold text-slate-900 mb-2">お電話でのお問い合わせ</h2>
+        <p class="text-slate-700 mb-6">ガラス割れなど、お急ぎの方はこちら。<br>土日祝も対応しております（要相談）。</p>
+        <a href="tel:0296246241"
+          class="group inline-flex items-center justify-center gap-2 bg-sky-600 text-white text-2xl font-bold px-8 py-4 rounded-full shadow-lg hover:bg-sky-700 hover:-translate-y-1 transition-all duration-300 w-full">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 group-hover:animate-pulse" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          0296-24-6241
+        </a>
+        <p class="text-sm text-slate-500 mt-4">受付時間：9:00〜18:00（日曜定休）</p>
       </div>
-    </form>
+
+      <!-- LINE Contact Section -->
+      <div
+        class="bg-green-50 border border-green-100 rounded-xl p-6 sm:p-8 text-center shadow-sm flex flex-col justify-center items-center h-full">
+        <h2 class="text-xl font-bold text-slate-900 mb-2">LINEでのお問い合わせ</h2>
+        <p class="text-slate-700 mb-6">写真を送って簡単お見積もり。<br>24時間いつでも送信可能です。</p>
+        <a href="#"
+          class="group inline-flex items-center justify-center gap-2 bg-[#06C755] text-white text-2xl font-bold px-8 py-4 rounded-full shadow-lg hover:bg-[#05b34c] hover:-translate-y-1 transition-all duration-300 w-full">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M12.003 2c-5.46 0-9.92 4.095-9.92 9.098 0 2.503 1.107 4.8 3.12 6.36l-.635 2.1c-.027.085-.01.18.04.252a.294.294 0 00.244.132c.045 0 .09-.01.13-.03l2.884-1.393c1.28.32 2.66.49 4.136.49 5.46 0 9.92-4.094 9.92-9.097C21.923 5.3 17.514 2 12.003 2z" />
+          </svg>
+          LINE問い合わせ
+        </a>
+        <p class="text-sm text-slate-500 mt-4">友達追加して写真と内容をお送りください</p>
+      </div>
+
+    </div>
+
+    <!-- Note -->
+    <div class="mt-8 text-center text-slate-600 text-sm">
+      <p>※お問い合わせの内容によっては、現地調査が必要な場合がございます。<br>
+        ※LINEの返信は営業時間内となりますのでご了承ください。</p>
+    </div>
   </main>
 
   <footer class="border-t border-slate-200 bg-white">
