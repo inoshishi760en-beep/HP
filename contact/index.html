@@ -1,152 +1,205 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>お問い合わせ | 有限会社老田硝子店</title>
-  <meta name="description" content="ガラス・サッシ・フィルム施工に関するご相談やお見積もり、ご依頼はこちらから承ります。" />
-  <link rel="canonical" href="https://example.com/contact/" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="お問い合わせ | 有限会社老田硝子店" />
-  <meta property="og:description" content="ご相談・お見積もりはこちらから。" />
-  <meta property="og:url" content="https://example.com/contact/" />
-  <meta property="og:image"
-    content="https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=1200&auto=format&fit=crop&q=60" />
-  <meta name="theme-color" content="#0ea5e9" />
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="../assets/favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = { theme: { extend: { fontFamily: { sans: ['"Noto Sans JP"', 'system-ui', 'sans-serif'] }, colors: { brand: { 600: '#0284c7', 700: '#0369a1' } } } } };
-  </script>
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ご相談・お見積もり｜電話・LINE｜老田硝子店</title>
+<meta name="description" content="窓のご相談・お見積もりは無料。電話0296-24-6241（8:00〜18:00・日曜定休）、LINEで受け付けています。お急ぎの修理はお電話ください。">
+<meta name="theme-color" content="#244e42">
+<link rel="canonical" href="https://inoshishi760en-beep.github.io/HP/contact/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="有限会社老田硝子店">
+<meta property="og:title" content="ご相談・お見積もり｜電話・LINE｜老田硝子店">
+<meta property="og:description" content="窓のご相談・お見積もりは無料。電話0296-24-6241（8:00〜18:00・日曜定休）、LINEで受け付けています。お急ぎの修理はお電話ください。">
+<meta property="og:url" content="https://inoshishi760en-beep.github.io/HP/contact/">
+<meta property="og:image" content="https://inoshishi760en-beep.github.io/HP/assets/social.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/favicon-small.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600&amp;family=Noto+Serif+JP:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script src="../js/script.js" defer>
+</script>
 </head>
-
-<body class="font-sans text-slate-800 bg-white">
-  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="flex h-16 items-center justify-between">
-        <a href="../index.html" class="flex items-center gap-3" aria-label="有限会社老田硝子店 ホーム">
-          <img src="../assets/logo.png" alt="有限会社老田硝子店 ロゴ" class="h-9 w-9 object-contain" />
-          <span class="text-slate-900 font-semibold">有限会社老田硝子店</span>
-        </a>
-        <nav class="hidden md:flex items-center gap-6" aria-label="主要ナビゲーション">
-          <a class="hover:text-sky-700" href="../service/index.html">事業紹介</a>
-          <a class="hover:text-sky-700" href="../company/index.html">会社概要</a>
-          <a class="text-sky-700 font-medium inline-flex items-center gap-2 px-3 py-2 rounded-md border border-sky-600"
-            href="./index.html">お問い合わせ</a>
-        </nav>
-        <button id="menuBtn"
-          class="md:hidden inline-flex items-center justify-center p-2 rounded text-sky-700 hover:bg-sky-50"
-          aria-expanded="false" aria-controls="mobileNav" aria-label="メニューを開く">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-              d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
-          </svg>
-        </button>
-      </div>
-    </div>
-    <div id="mobileNav" class="md:hidden hidden border-t border-slate-200" role="dialog" aria-label="モバイルメニュー">
-      <div class="px-4 py-3 space-y-2">
-        <a class="block px-3 py-2 rounded hover:bg-sky-50" href="../service/index.html">事業紹介</a>
-        <a class="block px-3 py-2 rounded hover:bg-sky-50" href="../company/index.html">会社概要</a>
-        <a class="block px-3 py-2 rounded bg-sky-600 text-white hover:bg-sky-700" href="./index.html">お問い合わせ</a>
-      </div>
-    </div>
-  </header>
-
-  <section class="py-10 bg-slate-50 border-b border-slate-200" data-aos="fade-down">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <h1 class="text-2xl sm:text-3xl font-bold text-slate-900">お問い合わせ</h1>
-      <p class="mt-2 text-slate-700">ご相談・お見積もりをご希望の方は、以下のフォームよりお気軽にご連絡ください。</p>
-    </div>
-  </section>
-
-  <main class="max-w-4xl mx-auto px-4 sm:px-6 py-12" data-aos="fade-up">
-    <div class="grid md:grid-cols-2 gap-8">
-
-      <!-- Phone Contact Section -->
-      <div
-        class="bg-sky-50 border border-sky-100 rounded-xl p-6 sm:p-8 text-center shadow-sm flex flex-col justify-center items-center h-full">
-        <h2 class="text-xl font-bold text-slate-900 mb-2">お電話でのお問い合わせ</h2>
-        <p class="text-slate-700 mb-6">ガラス割れなど、お急ぎの方はこちら。<br>土日祝も対応しております（要相談）。</p>
-        <a href="tel:0296246241"
-          class="group inline-flex items-center justify-center gap-2 bg-sky-600 text-white text-2xl font-bold px-8 py-4 rounded-full shadow-lg hover:bg-sky-700 hover:-translate-y-1 transition-all duration-300 w-full">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 group-hover:animate-pulse" fill="none"
-            viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-          </svg>
-          0296-24-6241
-        </a>
-        <p class="text-sm text-slate-500 mt-4">受付時間：9:00〜18:00（日曜定休）</p>
-      </div>
-
-      <!-- LINE Contact Section -->
-      <div
-        class="bg-green-50 border border-green-100 rounded-xl p-6 sm:p-8 text-center shadow-sm flex flex-col justify-center items-center h-full">
-        <h2 class="text-xl font-bold text-slate-900 mb-2">LINEでのお問い合わせ</h2>
-        <p class="text-slate-700 mb-6">写真を送って簡単お見積もり。<br>24時間いつでも送信可能です。</p>
-        <a href="#"
-          class="group inline-flex items-center justify-center gap-2 bg-[#06C755] text-white text-2xl font-bold px-8 py-4 rounded-full shadow-lg hover:bg-[#05b34c] hover:-translate-y-1 transition-all duration-300 w-full">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M12.003 2c-5.46 0-9.92 4.095-9.92 9.098 0 2.503 1.107 4.8 3.12 6.36l-.635 2.1c-.027.085-.01.18.04.252a.294.294 0 00.244.132c.045 0 .09-.01.13-.03l2.884-1.393c1.28.32 2.66.49 4.136.49 5.46 0 9.92-4.094 9.92-9.097C21.923 5.3 17.514 2 12.003 2z" />
-          </svg>
-          LINE問い合わせ
-        </a>
-        <p class="text-sm text-slate-500 mt-4">友達追加して写真と内容をお送りください</p>
-      </div>
-
-    </div>
-
-    <!-- Note -->
-    <div class="mt-8 text-center text-slate-600 text-sm">
-      <p>※お問い合わせの内容によっては、現地調査が必要な場合がございます。<br>
-        ※LINEの返信は営業時間内となりますのでご了承ください。</p>
-    </div>
-  </main>
-
-  <footer class="border-t border-slate-200 bg-white">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-sm">
-        <div>
-          <div class="flex items-center gap-2"><img src="../assets/logo.png" alt="有限会社老田硝子店 ロゴ"
-              class="h-8 w-8 object-contain" /><span class="font-semibold">有限会社老田硝子店</span></div>
-          <p class="mt-2 text-slate-700">〒308-0021 茨城県筑西市甲91-1</p>
-          <p class="mt-1 text-slate-700">TEL: 0296-24-6241</p>
-        </div>
-        <div>
-          <p class="font-semibold text-slate-900">メニュー</p>
-          <ul class="mt-2 space-y-1">
-            <li><a class="hover:text-sky-700" href="../index.html">トップ</a></li>
-            <li><a class="hover:text-sky-700" href="../service/index.html">事業紹介</a></li>
-            <li><a class="hover:text-sky-700" href="../company/index.html">会社概要</a></li>
-            <li><a class="text-sky-700 font-medium" href="./index.html">お問い合わせ</a></li>
-            <li><a class="block mt-2 hover:text-sky-700" href="../privacy/index.html">プライバシーポリシー</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="font-semibold text-slate-900">事業内容</p>
-          <p class="mt-2 text-slate-700">一般住宅のサッシ、ガラス、各種フィルム施工</p>
-        </div>
-        <div>
-          <p class="font-semibold text-slate-900">対応エリア</p>
-          <p class="mt-2 text-slate-700">筑西市および近隣地域</p>
-        </div>
-      </div>
-      <p class="mt-8 text-xs text-slate-500">© <span id="y"></span> 有限会社老田硝子店</p>
-    </div>
-  </footer>
-
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
-  <script src="../js/script.js" defer></script>
+<body>
+<a class="skip-link" href="#main">本文へスキップ</a>
+<header class="site-header">
+<div class="header-inner">
+<a class="brand" href="../index.html" aria-label="有限会社老田硝子店 ホーム">
+<img src="../assets/brand.webp" alt="" width="80" height="80">
+<span class="brand-text">
+<small>茨城県筑西市のガラス・サッシ専門店</small>
+<span class="company-prefix">有限会社</span>老田硝子店</span>
+</a>
+<nav class="desktop-nav" aria-label="メインナビゲーション">
+<a href="../index.html" class="home-link">ホーム</a>
+<a href="../service/index.html" class="">事業紹介</a>
+<a href="../company/index.html" class="">私たちについて</a>
+<a href="../contact/index.html" aria-current="page" class="button">ご相談・お見積もり<span class="arrow" aria-hidden="true">↗</span>
+</a>
+</nav>
+<button class="menu-button" id="menuBtn" aria-label="メニューを開く" aria-controls="mobileNav" aria-expanded="false">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 7h16M4 12h16M4 17h16"/>
+</svg>
+</button>
+</div>
+<nav class="mobile-nav" id="mobileNav" aria-label="モバイルナビゲーション" hidden>
+<a href="../index.html" class="home-link">ホーム<span class="arrow" aria-hidden="true">↗</span>
+</a>
+<a href="../service/index.html" class="">事業紹介<span class="arrow" aria-hidden="true">↗</span>
+</a>
+<a href="../company/index.html" class="">私たちについて<span class="arrow" aria-hidden="true">↗</span>
+</a>
+<a href="../contact/index.html" aria-current="page" class="">ご相談・お見積もり<span class="arrow" aria-hidden="true">↗</span>
+</a>
+</nav>
+</header>
+<main id="main">
+<div class="wrap">
+<nav class="breadcrumbs" aria-label="パンくずリスト">
+<a href="../index.html">ホーム</a>
+<span aria-hidden="true">/</span>
+<span aria-current="page">ご相談・お見積もり</span>
+</nav>
+</div>
+<section class="page-hero">
+<div class="wrap">
+<p class="eyebrow">Contact</p>
+<h1>ご相談・お見積もり</h1>
+<p class="lead">「ガラスが割れた」「窓が開けにくい」「寒さが気になる」。窓のことなら、まずは気軽にご相談ください。</p>
+</div>
+</section>
+<section class="section">
+<div class="wrap">
+<div class="contact-options">
+<section class="contact-option">
+<div class="icon-box">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="m7 3 3 5-2 2a15 15 0 0 0 6 6l2-2 5 3v3a1 1 0 0 1-1 1C10 21 3 14 3 4a1 1 0 0 1 1-1Z"/>
+</svg>
+</div>
+<p class="eyebrow">Phone</p>
+<h2>お急ぎの方は、お電話で。</h2>
+<p>ガラス割れなど、お急ぎのご相談はこちらへ。<br>状況を伺い、対応できる日程をご案内します。</p>
+<a class="button phone-number" href="tel:0296246241">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="m7 3 3 5-2 2a15 15 0 0 0 6 6l2-2 5 3v3a1 1 0 0 1-1 1C10 21 3 14 3 4a1 1 0 0 1 1-1Z"/>
+</svg>0296-24-6241</a>
+<small>受付 8:00〜18:00 / 日曜定休<br>当日対応の可否は、在庫・現場の状況によります。</small>
+</section>
+<section class="contact-option line">
+<div class="icon-box">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M21 11a8 8 0 0 1-8 8H8l-5 3 1-7a8 8 0 0 1-1-4 9 9 0 0 1 18 0Z"/>
+<path d="M8 10h8M8 14h5"/>
+</svg>
+</div>
+<p class="eyebrow">LINE</p>
+<h2>写真を添えて、気軽に。</h2>
+<p>友だち追加して、窓の写真とお困りごとを送信。<br>文章でゆっくり相談したい方におすすめです。</p>
+<a class="button" href="https://lin.ee/80STrad" target="_blank" rel="noopener noreferrer">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M21 11a8 8 0 0 1-8 8H8l-5 3 1-7a8 8 0 0 1-1-4 9 9 0 0 1 18 0Z"/>
+<path d="M8 10h8M8 14h5"/>
+</svg>LINEで相談する<span class="arrow" aria-hidden="true">↗</span>
+</a>
+<small>メッセージは24時間送信できます。<br>返信は営業時間内に順次行います。</small>
+</section>
+</div>
+<div class="contact-preparation">
+<div>
+<p class="eyebrow">Before you contact us</p>
+<h2 class="section-title">わかる範囲で、<br>お聞かせください。</h2>
+<p class="muted">詳しい種類や寸法がわからなくても大丈夫です。</p>
+</div>
+<ul class="checklist">
+<li>お名前・ご連絡先</li>
+<li>お住まいの地域・施工場所</li>
+<li>窓の状態や、お困りごと</li>
+<li>窓全体と気になる箇所の写真（LINEの場合）</li>
+<li>ご希望の時期</li>
+</ul>
+</div>
+<aside class="note-box">
+<strong>ご相談・お見積もりは無料です。</strong>正確なお見積もりには、現地確認が必要な場合があります。施工内容と費用をご確認いただいてから作業を進めます。<br>お預かりする情報の取り扱いは、<a class="text-link" href="../privacy/index.html">プライバシーポリシー<span class="arrow" aria-hidden="true">↗</span>
+</a>をご確認ください。</aside>
+</div>
+</section>
+<section class="section faq-section" id="faq">
+<div class="wrap faq-layout">
+<div>
+<p class="eyebrow">Questions & answers</p>
+<h2 class="section-title">よくあるご質問</h2>
+</div>
+<div class="faq-list">
+<details>
+<summary>ガラス一枚だけでもお願いできますか？</summary>
+<p>はい、ガラス一枚の修理・交換から承ります。小さなひびや、窓の開け閉めの不具合もお気軽にご相談ください。</p>
+</details>
+<details>
+<summary>今日中に修理してもらえますか？</summary>
+<p>ガラスの種類や在庫、現場の状況によって当日対応できる場合があります。お急ぎの方は、受付時間内（8:00〜18:00・日曜定休）にお電話ください。</p>
+</details>
+<details>
+<summary>見積もりに費用はかかりますか？</summary>
+<p>ご相談・お見積もりは無料です。施工費用はガラスの種類やサイズ、作業条件により異なります。内容と費用をご案内し、ご納得いただいてから施工します。</p>
+</details>
+<details>
+<summary>どの地域まで対応していますか？</summary>
+<p>茨城県筑西市および近隣地域に対応しています。お住まいの地域とご相談内容を、お電話またはLINEでお知らせください。</p>
+</details>
+<details>
+<summary>LINEでは何を送ればいいですか？</summary>
+<p>窓全体と気になる箇所の写真、おおよそのサイズ、お住まいの地域、ご希望の内容をお送りください。返信は営業時間内に順次行います。正確なお見積もりには現地確認が必要な場合があります。</p>
+</details>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="wrap">
+<div class="footer-top">
+<div>
+<a class="brand" href="../index.html" aria-label="有限会社老田硝子店 ホーム">
+<img src="../assets/brand.webp" alt="" width="80" height="80">
+<span class="brand-text">
+<small>茨城県筑西市のガラス・サッシ専門店</small>
+<span class="company-prefix">有限会社</span>老田硝子店</span>
+</a>
+<address class="footer-address">〒308-0021 茨城県筑西市甲91-1<br>TEL <a href="tel:0296246241">0296-24-6241</a>
+<br>受付 8:00〜18:00 / 日曜定休</address>
+</div>
+<nav class="footer-nav" aria-label="フッターナビゲーション">
+<a href="../index.html">ホーム</a>
+<a href="../service/index.html">事業紹介</a>
+<a href="../company/index.html">会社概要</a>
+<a href="../contact/index.html">お問い合わせ</a>
+<a href="../privacy/index.html">プライバシーポリシー</a>
+<a href="../index.html#faq">よくあるご質問</a>
+</nav>
+</div>
+<div class="footer-bottom">
+<span>筑西市および近隣地域の、窓と暮らしを支えます。</span>
+<span>© <span data-year>2026</span> 有限会社老田硝子店</span>
+</div>
+</div>
+</footer>
+<nav class="mobile-contact" aria-label="すぐに相談する">
+<a href="tel:0296246241">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="m7 3 3 5-2 2a15 15 0 0 0 6 6l2-2 5 3v3a1 1 0 0 1-1 1C10 21 3 14 3 4a1 1 0 0 1 1-1Z"/>
+</svg>電話で相談</a>
+<a href="https://lin.ee/80STrad" target="_blank" rel="noopener noreferrer">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M21 11a8 8 0 0 1-8 8H8l-5 3 1-7a8 8 0 0 1-1-4 9 9 0 0 1 18 0Z"/>
+<path d="M8 10h8M8 14h5"/>
+</svg>LINEで相談<span class="arrow" aria-hidden="true">↗</span>
+</a>
+</nav>
 </body>
-
 </html>

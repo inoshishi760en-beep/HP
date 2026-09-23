@@ -1,170 +1,253 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>事業紹介 | 有限会社老田硝子店</title>
-  <meta name="description" content="ガラス施工・サッシ施工・窓用フィルム施工のご案内。用途やお悩みに合わせて最適な施工をご提案いたします。" />
-  <link rel="canonical" href="https://example.com/service/" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="事業紹介 | 有限会社老田硝子店" />
-  <meta property="og:description" content="ガラス・サッシ・窓用フィルム施工のサービス概要。" />
-  <meta property="og:url" content="https://example.com/service/" />
-  <meta property="og:image"
-    content="https://images.unsplash.com/photo-1510936111840-65e151ad71bb?w=1200&auto=format&fit=crop&q=60" />
-  <meta name="theme-color" content="#0ea5e9" />
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="../assets/favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = { theme: { extend: { fontFamily: { sans: ['"Noto Sans JP"', 'system-ui', 'sans-serif'] }, colors: { brand: { 600: '#0284c7', 700: '#0369a1' } } } } };
-  </script>
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>事業紹介｜ガラス修理・サッシ・窓用フィルム｜老田硝子店</title>
+<meta name="description" content="ガラス修理・交換、サッシ調整・内窓設置、窓用フィルム施工。筑西市と近隣地域の窓のお悩みに、住まいに合った施工をご提案します。">
+<meta name="theme-color" content="#244e42">
+<link rel="canonical" href="https://inoshishi760en-beep.github.io/HP/service/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="有限会社老田硝子店">
+<meta property="og:title" content="事業紹介｜ガラス修理・サッシ・窓用フィルム｜老田硝子店">
+<meta property="og:description" content="ガラス修理・交換、サッシ調整・内窓設置、窓用フィルム施工。筑西市と近隣地域の窓のお悩みに、住まいに合った施工をご提案します。">
+<meta property="og:url" content="https://inoshishi760en-beep.github.io/HP/service/">
+<meta property="og:image" content="https://inoshishi760en-beep.github.io/HP/assets/social.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/favicon-small.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600&amp;family=Noto+Serif+JP:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script src="../js/script.js" defer>
+</script>
 </head>
-
-<body class="font-sans text-slate-800 bg-white">
-  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="flex h-16 items-center justify-between">
-        <a href="../index.html" class="flex items-center gap-3" aria-label="有限会社老田硝子店 ホーム">
-          <img src="../assets/logo.png" alt="有限会社老田硝子店 ロゴ" class="h-9 w-9 object-contain" />
-          <span class="text-slate-900 font-semibold">有限会社老田硝子店</span>
-        </a>
-        <nav class="hidden md:flex items-center gap-6" aria-label="主要ナビゲーション">
-          <a class="text-sky-700 font-medium" href="./index.html">事業紹介</a>
-          <a class="hover:text-sky-700" href="../company/index.html">会社概要</a>
-          <a class="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-sky-600 text-white hover:bg-sky-700"
-            href="../contact/index.html">お問い合わせ</a>
-        </nav>
-        <button id="menuBtn"
-          class="md:hidden inline-flex items-center justify-center p-2 rounded text-sky-700 hover:bg-sky-50"
-          aria-expanded="false" aria-controls="mobileNav" aria-label="メニューを開く">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-              d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
-          </svg>
-        </button>
-      </div>
-    </div>
-    <div id="mobileNav" class="md:hidden hidden border-t border-slate-200" role="dialog" aria-label="モバイルメニュー">
-      <div class="px-4 py-3 space-y-2">
-        <a class="block px-3 py-2 rounded bg-sky-50 text-sky-700" href="./index.html">事業紹介</a>
-        <a class="block px-3 py-2 rounded hover:bg-sky-50" href="../company/index.html">会社概要</a>
-        <a class="block px-3 py-2 rounded bg-sky-600 text-white hover:bg-sky-700"
-          href="../contact/index.html">お問い合わせ</a>
-      </div>
-    </div>
-  </header>
-
-  <section class="py-10 bg-slate-50 border-b border-slate-200" data-aos="fade-down">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <h1 class="text-2xl sm:text-3xl font-bold text-slate-900">事業紹介</h1>
-      <p class="mt-2 text-slate-700">お悩みやご希望に合わせた最適な施工をご提案いたします。</p>
-    </div>
-  </section>
-
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-12 space-y-16">
-    <section id="glass" aria-labelledby="glass-title" class="scroll-mt-24" data-aos="fade-up">
-      <div class="grid lg:grid-cols-2 gap-8 items-center">
-        <img src="../assets/service_repair.png" alt="ガラス修理・交換の様子"
-          class="rounded-lg border border-slate-200 shadow-sm w-full object-cover" />
-        <div>
-          <h2 id="glass-title" class="text-xl sm:text-2xl font-bold text-slate-900">ガラス修理・交換</h2>
-          <p class="mt-3 text-slate-700 font-medium">「割れてしまった」「ヒビが入った」…そんな時はお任せください。</p>
-          <p class="mt-2 text-slate-700">
-            窓ガラス1枚からでも、すぐに駆けつけます。断熱ガラスや防犯ガラスへの交換も承っております。
-            熟練の職人が、採寸から交換まで丁寧に対応し、安心できる暮らしを取り戻します。
-          </p>
-          <ul class="mt-4 list-disc pl-5 text-slate-700 space-y-1">
-            <li>ガラス割れ替え（当日対応可・要相談）</li>
-            <li>結露対策（ペアガラス・真空ガラス）</li>
-            <li>防犯ガラスへのグレードアップ</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="sash" aria-labelledby="sash-title" class="scroll-mt-24" data-aos="fade-up" data-aos-delay="100">
-      <div class="grid lg:grid-cols-2 gap-8 items-center">
-        <div class="order-2 lg:order-1">
-          <h2 id="sash-title" class="text-xl sm:text-2xl font-bold text-slate-900">サッシ（窓枠）の調整・交換</h2>
-          <p class="mt-3 text-slate-700 font-medium">「窓が重くて開かない」「すきま風が寒い」…そのお悩み、サッシが原因かもしれません。</p>
-          <p class="mt-2 text-slate-700">
-            戸車（キャスター）の交換やレールの調整だけで、驚くほどスムーズになることもあります。
-            古くなったサッシの全体交換や、網戸の張り替えもお気軽にご相談ください。
-          </p>
-          <ul class="mt-4 list-disc pl-5 text-slate-700 space-y-1">
-            <li>窓の開閉不具合の調整・戸車交換</li>
-            <li>内窓（二重窓）の設置で断熱・防音</li>
-            <li>玄関ドアや勝手口の交換</li>
-          </ul>
-        </div>
-        <img src="../assets/service_security.png" alt="サッシ・窓枠のリフォーム"
-          class="order-1 lg:order-2 rounded-lg border border-slate-200 shadow-sm w-full object-cover" />
-      </div>
-    </section>
-
-    <section id="film" aria-labelledby="film-title" class="scroll-mt-24" data-aos="fade-up" data-aos-delay="200">
-      <div class="grid lg:grid-cols-2 gap-8 items-center">
-        <img src="../assets/service_eco.png" alt="窓用フィルム施工"
-          class="rounded-lg border border-slate-200 shadow-sm w-full object-cover" />
-        <div>
-          <h2 id="film-title" class="text-xl sm:text-2xl font-bold text-slate-900">窓用フィルム施工</h2>
-          <p class="mt-3 text-slate-700 font-medium">今の窓に貼るだけ。手軽に機能プラス。</p>
-          <p class="mt-2 text-slate-700">
-            「地震でガラスが飛び散るのが怖い」「日差しが暑い」「外からの視線が気になる」といったお悩みには、
-            高機能フィルムがおすすめです。工事は大掛かりにならず、短時間で完了します。
-          </p>
-          <ul class="mt-4 list-disc pl-5 text-slate-700 space-y-1">
-            <li>飛散防止（台風・地震対策）</li>
-            <li>遮熱・UVカット（暑さ・日焼け対策）</li>
-            <li>目隠し（プライバシー保護）</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="border-t border-slate-200 bg-white">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-sm">
-        <div>
-          <div class="flex items-center gap-2"><img src="../assets/logo.png" alt="有限会社老田硝子店 ロゴ"
-              class="h-8 w-8 object-contain" /><span class="font-semibold">有限会社老田硝子店</span></div>
-          <p class="mt-2 text-slate-700">〒308-0021 茨城県筑西市甲91-1</p>
-          <p class="mt-1 text-slate-700">TEL: 0296-24-6241</p>
-        </div>
-        <div>
-          <p class="font-semibold text-slate-900">メニュー</p>
-          <ul class="mt-2 space-y-1">
-            <li><a class="hover:text-sky-700" href="../index.html">トップ</a></li>
-            <li><a class="text-sky-700 font-medium" href="./index.html">事業紹介</a></li>
-            <li><a class="hover:text-sky-700" href="../company/index.html">会社概要</a></li>
-            <li><a class="hover:text-sky-700" href="../contact/index.html">お問い合わせ</a></li>
-            <li><a class="block mt-2 hover:text-sky-700" href="../privacy/index.html">プライバシーポリシー</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="font-semibold text-slate-900">事業内容</p>
-          <p class="mt-2 text-slate-700">一般住宅のサッシ、ガラス、各種フィルム施工</p>
-        </div>
-        <div>
-          <p class="font-semibold text-slate-900">対応エリア</p>
-          <p class="mt-2 text-slate-700">筑西市および近隣地域</p>
-        </div>
-      </div>
-      <p class="mt-8 text-xs text-slate-500">© <span id="y"></span> 有限会社老田硝子店</p>
-    </div>
-  </footer>
-
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
-  <script src="../js/script.js" defer></script>
+<body>
+<a class="skip-link" href="#main">本文へスキップ</a>
+<header class="site-header">
+<div class="header-inner">
+<a class="brand" href="../index.html" aria-label="有限会社老田硝子店 ホーム">
+<img src="../assets/brand.webp" alt="" width="80" height="80">
+<span class="brand-text">
+<small>茨城県筑西市のガラス・サッシ専門店</small>
+<span class="company-prefix">有限会社</span>老田硝子店</span>
+</a>
+<nav class="desktop-nav" aria-label="メインナビゲーション">
+<a href="../index.html" class="home-link">ホーム</a>
+<a href="../service/index.html" aria-current="page" class="">事業紹介</a>
+<a href="../company/index.html" class="">私たちについて</a>
+<a href="../contact/index.html" class="button">ご相談・お見積もり<span class="arrow" aria-hidden="true">↗</span>
+</a>
+</nav>
+<button class="menu-button" id="menuBtn" aria-label="メニューを開く" aria-controls="mobileNav" aria-expanded="false">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 7h16M4 12h16M4 17h16"/>
+</svg>
+</button>
+</div>
+<nav class="mobile-nav" id="mobileNav" aria-label="モバイルナビゲーション" hidden>
+<a href="../index.html" class="home-link">ホーム<span class="arrow" aria-hidden="true">↗</span>
+</a>
+<a href="../service/index.html" aria-current="page" class="">事業紹介<span class="arrow" aria-hidden="true">↗</span>
+</a>
+<a href="../company/index.html" class="">私たちについて<span class="arrow" aria-hidden="true">↗</span>
+</a>
+<a href="../contact/index.html" class="">ご相談・お見積もり<span class="arrow" aria-hidden="true">↗</span>
+</a>
+</nav>
+</header>
+<main id="main">
+<div class="wrap">
+<nav class="breadcrumbs" aria-label="パンくずリスト">
+<a href="../index.html">ホーム</a>
+<span aria-hidden="true">/</span>
+<span aria-current="page">事業紹介</span>
+</nav>
+</div>
+<section class="page-hero">
+<div class="wrap">
+<p class="eyebrow">Our services</p>
+<h1>事業紹介</h1>
+<p class="lead">ガラス一枚の修理から、窓まわりのリフォームまで。お悩みと住まいに合った施工をご提案します。</p>
+<nav class="jump-nav" aria-label="サービス一覧">
+<a href="#glass">01 ガラス修理・交換<span aria-hidden="true">↓</span>
+</a>
+<a href="#sash">02 サッシ・内窓<span aria-hidden="true">↓</span>
+</a>
+<a href="#film">03 窓用フィルム<span aria-hidden="true">↓</span>
+</a>
+</nav>
+</div>
+</section>
+<div class="wrap">
+<section class="service-detail" id="glass" aria-labelledby="glass-title">
+<figure class="detail-photo">
+<img src="../assets/service_repair.webp" alt="窓ガラスを丁寧に調整する作業のイメージ" width="1024" height="1024" loading="lazy" decoding="async" >
+<figcaption>写真は施工内容・住空間のイメージです。</figcaption>
+</figure>
+<div class="detail-copy">
+<p class="eyebrow">01 / Glass repair</p>
+<h2 class="section-title" id="glass-title">ガラス修理・交換</h2>
+<p>
+<strong>一枚のガラスから、いつもの安心を。</strong>
+<br>割れたガラスや小さなひびも、まずはご相談ください。ガラスの種類とサイズを確認し、採寸から交換まで丁寧に対応します。防犯性や断熱性を高めるガラスへの交換も承ります。</p>
+<ul>
+<li>透明・すり・網入りガラスの割れ替え</li>
+<li>ペアガラス・真空ガラスへの交換</li>
+<li>防犯ガラスのご相談</li>
+</ul>
+<a class="text-link" href="../contact/index.html">このサービスを相談する<span class="arrow" aria-hidden="true">↗</span>
+</a>
+<p>当日対応はガラスの種類・在庫・現場の状況によります。お急ぎの場合はお電話ください。</p>
+</div>
+</section>
+<section class="service-detail" id="sash" aria-labelledby="sash-title">
+<figure class="detail-photo">
+<img src="../assets/service_eco.webp" alt="内窓のある明るいリビングのイメージ" width="1024" height="1024" loading="lazy" decoding="async" >
+<figcaption>写真は施工内容・住空間のイメージです。</figcaption>
+</figure>
+<div class="detail-copy">
+<p class="eyebrow">02 / Window & sash</p>
+<h2 class="section-title" id="sash-title">サッシ・内窓</h2>
+<p>
+<strong>開けるたびに、心地よい窓へ。</strong>
+<br>窓の開け閉めが重い、すきま風が気になる。そんなお悩みは、戸車の交換やレールの調整で改善できる場合があります。内窓の設置やサッシの交換など、住まいに合う方法をご提案します。</p>
+<ul>
+<li>サッシ調整・戸車の交換</li>
+<li>内窓（二重窓）の設置</li>
+<li>玄関ドア・勝手口の交換、網戸の張り替え</li>
+</ul>
+<a class="text-link" href="../contact/index.html">このサービスを相談する<span class="arrow" aria-hidden="true">↗</span>
+</a>
+<p>断熱・防音・結露軽減の効果は、建物や設置条件によって異なります。現地の状態を確認してご案内します。</p>
+</div>
+</section>
+<section class="service-detail" id="film" aria-labelledby="film-title">
+<figure class="detail-photo">
+<img src="../assets/service_security.webp" alt="窓ガラスの表面を仕上げる作業のイメージ" width="1024" height="1024" loading="lazy" decoding="async" >
+<figcaption>写真は施工内容・住空間のイメージです。</figcaption>
+</figure>
+<div class="detail-copy">
+<p class="eyebrow">03 / Window film</p>
+<h2 class="section-title" id="film-title">窓用フィルム</h2>
+<p>
+<strong>今ある窓に、もうひとつの機能を。</strong>
+<br>日差しの暑さ、外からの視線、万一のガラスの飛散。気になることに合わせて、窓用フィルムをご提案します。ガラスの種類や設置環境を確認し、適した製品を丁寧に施工します。</p>
+<ul>
+<li>飛散防止フィルム</li>
+<li>遮熱・UVカットフィルム</li>
+<li>目隠しフィルム</li>
+</ul>
+<a class="text-link" href="../contact/index.html">このサービスを相談する<span class="arrow" aria-hidden="true">↗</span>
+</a>
+<p>フィルムの種類によって機能は異なります。ガラスとの適合性を確認したうえで施工します。</p>
+</div>
+</section>
+<aside class="note-box">
+<strong>費用は、窓の種類や状態を確認してご案内します。</strong>ガラスのサイズや種類、設置場所によって費用は異なります。まずはお電話・LINEでご相談ください。ご相談・お見積もりは無料です。</aside>
+</div>
+<section class="section" id="flow">
+<div class="wrap">
+<div class="section-head">
+<div>
+<p class="eyebrow">How it works</p>
+<h2 class="section-title">ご相談から、施工まで。</h2>
+</div>
+<p>初めてのご依頼でも、ひとつずつ丁寧に。<br>内容とお見積もりにご納得いただいてから進めます。</p>
+</div>
+<div class="flow-grid">
+<div class="flow-step">
+<span aria-hidden="true">01</span>
+<h3>お問い合わせ</h3>
+<p>お電話またはLINEで、気になることをお聞かせください。</p>
+</div>
+<div class="flow-step">
+<span aria-hidden="true">02</span>
+<h3>現地確認・お見積もり</h3>
+<p>窓の状態やサイズを確認し、施工内容と費用をご案内します。</p>
+</div>
+<div class="flow-step">
+<span aria-hidden="true">03</span>
+<h3>日程調整・施工</h3>
+<p>内容にご納得いただいたうえで日程を調整し、丁寧に施工します。</p>
+</div>
+<div class="flow-step">
+<span aria-hidden="true">04</span>
+<h3>仕上がりのご確認</h3>
+<p>施工箇所や使い方を一緒に確認。気になる点もお伝えください。</p>
+</div>
+</div>
+</div>
+</section>
+<section class="contact-band" aria-labelledby="contact-heading">
+<div class="wrap">
+<div>
+<p class="eyebrow">Contact</p>
+<h2 class="section-title" id="contact-heading">窓のこと、<br>気軽に話してみませんか。</h2>
+<p>小さな修理から、住まいの見直しまで。<br>ご相談・お見積もりは無料です。</p>
+</div>
+<div class="contact-band-actions">
+<div class="phone-block">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="m7 3 3 5-2 2a15 15 0 0 0 6 6l2-2 5 3v3a1 1 0 0 1-1 1C10 21 3 14 3 4a1 1 0 0 1 1-1Z"/>
+</svg>
+<a href="tel:0296246241">0296-24-6241</a>
+<small>受付 8:00〜18:00 / 日曜定休</small>
+</div>
+<a class="button light" href="https://lin.ee/80STrad" target="_blank" rel="noopener noreferrer">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M21 11a8 8 0 0 1-8 8H8l-5 3 1-7a8 8 0 0 1-1-4 9 9 0 0 1 18 0Z"/>
+<path d="M8 10h8M8 14h5"/>
+</svg>LINEで相談する<span class="arrow" aria-hidden="true">↗</span>
+</a>
+<a class="button outline" href="../contact/index.html">お問い合わせのご案内<span class="arrow" aria-hidden="true">↗</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="wrap">
+<div class="footer-top">
+<div>
+<a class="brand" href="../index.html" aria-label="有限会社老田硝子店 ホーム">
+<img src="../assets/brand.webp" alt="" width="80" height="80">
+<span class="brand-text">
+<small>茨城県筑西市のガラス・サッシ専門店</small>
+<span class="company-prefix">有限会社</span>老田硝子店</span>
+</a>
+<address class="footer-address">〒308-0021 茨城県筑西市甲91-1<br>TEL <a href="tel:0296246241">0296-24-6241</a>
+<br>受付 8:00〜18:00 / 日曜定休</address>
+</div>
+<nav class="footer-nav" aria-label="フッターナビゲーション">
+<a href="../index.html">ホーム</a>
+<a href="../service/index.html">事業紹介</a>
+<a href="../company/index.html">会社概要</a>
+<a href="../contact/index.html">お問い合わせ</a>
+<a href="../privacy/index.html">プライバシーポリシー</a>
+<a href="../index.html#faq">よくあるご質問</a>
+</nav>
+</div>
+<div class="footer-bottom">
+<span>筑西市および近隣地域の、窓と暮らしを支えます。</span>
+<span>© <span data-year>2026</span> 有限会社老田硝子店</span>
+</div>
+</div>
+</footer>
+<nav class="mobile-contact" aria-label="すぐに相談する">
+<a href="tel:0296246241">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="m7 3 3 5-2 2a15 15 0 0 0 6 6l2-2 5 3v3a1 1 0 0 1-1 1C10 21 3 14 3 4a1 1 0 0 1 1-1Z"/>
+</svg>電話で相談</a>
+<a href="https://lin.ee/80STrad" target="_blank" rel="noopener noreferrer">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M21 11a8 8 0 0 1-8 8H8l-5 3 1-7a8 8 0 0 1-1-4 9 9 0 0 1 18 0Z"/>
+<path d="M8 10h8M8 14h5"/>
+</svg>LINEで相談<span class="arrow" aria-hidden="true">↗</span>
+</a>
+</nav>
 </body>
-
 </html>

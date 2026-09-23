@@ -1,79 +1,35 @@
-// 老田硝子店 - 最小構成用スクリプト
-// 役割:
-//  - モバイルメニュー開閉
-//  - 年号の自動更新
-//  - ヒーロー画像・テキストの初期フェードイン
-//  - AOS(Animate On Scroll) の初期化
-//  - お問い合わせフォームの簡易バリデーションと擬似送信
-
-document.addEventListener('DOMContentLoaded', function () {
-  // モバイルメニュー開閉
-  const btn = document.getElementById('menuBtn');
-  const nav = document.getElementById('mobileNav');
-  if (btn && nav) {
-    btn.addEventListener('click', () => {
-      const nowHidden = nav.classList.toggle('hidden');
-      btn.setAttribute('aria-expanded', String(!nowHidden));
-    });
+"use strict";
+const menuButton = document.getElementById("menuBtn");
+const mobileNav = document.getElementById("mobileNav");
+if (menuButton && mobileNav) {
+  function closeMenu(restoreFocus = false) {
+    mobileNav.hidden = true;
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-label", "メニューを開く");
+    if (restoreFocus) menuButton.focus();
   }
-
-  // 年号の自動更新
-  const year = document.getElementById('y');
-  if (year) year.textContent = new Date().getFullYear();
-
-  // ヒーローのフェードイン（画像 -> テキスト）
-  const heroImg = document.querySelector('.hero-img');
-  const heroText = document.querySelector('.hero-text');
-  if (heroImg) {
-    const reveal = () => heroImg.classList.add('is-visible');
-    if (heroImg.complete) reveal(); else heroImg.addEventListener('load', reveal);
-  }
-  if (heroText) {
-    setTimeout(() => heroText.classList.add('is-visible'), 150);
-  }
-
-  // モバイル下部CTAのふんわり表示
-  const mobileCta = document.getElementById('mobileStickyCta');
-  if (mobileCta) {
-    setTimeout(() => mobileCta.classList.add('is-visible'), 300);
-  }
-
-  // AOS 初期化（スクロール演出）
-  if (window.AOS) {
-    AOS.init({
-      duration: 650,
-      easing: 'ease-out',
-      once: true,
-      offset: 80,
-    });
-  }
-
-  // お問い合わせフォームの擬似送信 + 簡易検証
-  const form = document.getElementById('contactForm');
-  if (form) {
-    const nameI = document.getElementById('name');
-    const emailI = document.getElementById('email');
-    const msgI = document.getElementById('message');
-    const agreeI = document.getElementById('agree');
-    const nameErr = document.getElementById('nameErr');
-    const emailErr = document.getElementById('emailErr');
-    const messageErr = document.getElementById('messageErr');
-    const formMsg = document.getElementById('formMsg');
-
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      let ok = true;
-      [nameErr, emailErr, messageErr].forEach(el => el && el.classList.add('hidden'));
-
-      if (nameI && !nameI.value.trim()) { nameErr && nameErr.classList.remove('hidden'); ok = false; }
-      if (emailI && !emailI.checkValidity()) { emailErr && emailErr.classList.remove('hidden'); ok = false; }
-      if (msgI && !msgI.value.trim()) { messageErr && messageErr.classList.remove('hidden'); ok = false; }
-      if (agreeI && !agreeI.checked) { ok = false; alert('個人情報の取り扱いに同意してください。'); }
-      if (!ok) return;
-
-      form.reset();
-      formMsg && formMsg.classList.remove('hidden');
-    });
-  }
+  menuButton.addEventListener("click", () => {
+    const opening = mobileNav.hidden;
+    mobileNav.hidden = !opening;
+    menuButton.setAttribute("aria-expanded", String(opening));
+    menuButton.setAttribute(
+      "aria-label",
+      opening ? "メニューを閉じる" : "メニューを開く",
+    );
+  });
+  mobileNav.addEventListener("click", (event) => {
+    if (event.target.closest("a")) closeMenu();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !mobileNav.hidden) closeMenu(true);
+  });
+  document.addEventListener("click", (event) => {
+    if (!mobileNav.hidden && !event.target.closest(".site-header")) closeMenu();
+  });
+  matchMedia("(min-width: 901px)").addEventListener("change", (event) => {
+    if (event.matches) closeMenu();
+  });
+}
+document.querySelectorAll("[data-year]").forEach((element) => {
+  element.textContent = String(new Date().getFullYear());
 });
-
